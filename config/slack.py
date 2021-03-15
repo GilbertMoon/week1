@@ -2,7 +2,7 @@ from slacker import Slacker
 
 class Slack():
     def __init__(self):
-        self.token = 'xoxb-1857775865715-1850876684246-BeXt1IUODuRasfJFyXMENQ2O'
+        self.token = 'xoxb-1857775865715-1850876684246-*****************'
 
     def notification(self, pretext=None, title=None, fallback=None, text=None):
         attachments_dict = dict()
