@@ -1,0 +1,17 @@
+안녕하세요.
+FOCUS H&S 지태환입니다.
+ 보통 LOG조회 쿼리같은경우는 요청이 들어올때 계약번호나 장비 SN을 알려줍니다.
+ 그렇기 때문에 log_text에 계약번호 및 장비SN이 같이 들어있어 like문을 사용하게됩니다.
+
+    아래는 자주사용하는 쿼리문입니다. 조건문은 경우에따라 [log_id]와 [log_date]가 추가 될 수 있습니다.
+
+ SELECT  [log_id]
+      ,[log_ip]
+      ,[log_date]
+      ,[log_type]
+      ,[log_page]
+      ,[log_text]
+      ,[log_authtype]
+  FROM [_UserLog] with (nolock) where log_text like '%계약번호 or 장비 SN%'
+ 
+감사합니다. 
