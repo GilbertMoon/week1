@@ -1,0 +1,29 @@
+1. gun_drug_maplotlib.ipynb
+
+plt.figure(figsize=(6,6))
+plt.scatter(data_result['Incident per 100K'], data_result['Unmarried Birthrate'], s=30)
+plt.plot(fx, f3(fx), ls='dashed', lw=3, color='r')
+plt.xlabel('Gun Incident')
+plt.ylabel('Unmarried Birthrate')
+plt.grid()
+plt.savefig('./graph/corelation01.png')
+plt.show()
+
+
+2. foliummap.ipynb
+
+folium.Choropleth(
+    geo_data=state_geo,
+    name="choropleth",
+    data=state_Gunowner,
+    columns=["State", "Gun owner"],
+    key_on="feature.id",
+    fill_color='YlOrRd',
+    fill_opacity=0.7,
+    line_opacity=.1,
+    legend_name="Gun Owner Rate (%)",
+).add_to(map_gunowner)
+
+folium.LayerControl().add_to(map_gunowner)
+map_gunowner.save("./graph/map1.html")
+map_gunowner
